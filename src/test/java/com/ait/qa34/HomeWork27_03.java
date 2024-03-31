@@ -22,7 +22,7 @@ public class HomeWork27_03 {
 
         driver.navigate().to("https://demowebshop.tricentis.com");
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(11));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
 
     @Test
