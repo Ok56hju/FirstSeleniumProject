@@ -32,8 +32,22 @@ public class HomeWork27_03 {
             List<WebElement> elements = driver.findElements((By.tagName(teg)));
             System.out.println("Number of <" + teg + "> elements: " + elements.size());
         }
+    }
+    @Test
+    public void findElementByCssSelector(){
+        driver.findElement(By.cssSelector("#dialog-notifications-success"));
+        driver.findElement(By.cssSelector(".bar-notification"));
+        driver.findElement(By.cssSelector("[title='Error']"));
+        driver.findElement(By.cssSelector("[title='Close']"));
+        driver.findElement(By.cssSelector("[class*='bar']"));
+        driver.findElement(By.cssSelector(".page-body"));
+        driver.findElement(By.cssSelector("[class$='grid']"));
+        driver.findElement(By.cssSelector("[class$='my-account']"));
+        driver.findElement(By.cssSelector(".ui-autocomplete.ui-front.ui-menu.ui-widget.ui-widget-content.ui-corner-all"));
+        driver.findElement(By.cssSelector("[type='text/javascript']"));
 
     }
+
 
     @AfterMethod
     public void tearDown(){

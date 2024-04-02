@@ -26,15 +26,48 @@ public class FindElementsTests {
     @Test
     public void findElementByTagName(){
         // find element by tag name
-//        WebElement element = driver.findElement(By.tagName("h1"));
-//        System.out.println(element.getText());
+        WebElement element = driver.findElement(By.tagName("h1"));
+        System.out.println(element.getText());
         // find List of elements by tag name
-
+//
         WebElement element1 = driver.findElement((By.tagName("a")));
         System.out.println(element1.getText());
 
         List<WebElement> elements = driver.findElements((By.tagName("a")));
         System.out.println(elements.size());
+    }
+    @Test
+    public void findElemrntByLocator(){
+        // id
+        driver.findElement(By.id("city"));
+        //class name
+        driver.findElement(By.className("input-container"));
+        //  name By.name ("user");
+        //link text
+        driver.findElement(By.linkText(" Let the car work "));
+        //partial link text
+        driver.findElement(By.partialLinkText("work"));
+    }
+    //css selector
+    //xPath
+    @Test
+    public void findElementByCssSelector() {
+        //tag name = tag name
+        //id -> #id
+        // driver.findElement(By.id("city"));
+        driver.findElement(By.cssSelector("#city"));
+        //class name -> .className
+        // driver.findElement(By.className("input-container"));
+        driver.findElement(By.cssSelector(".input-container"));
+        //[name='user']
+        driver.findElement(By.cssSelector("[for='city']"));
+        driver.findElement(By.cssSelector("[href='/search']"));
+        //contains -> *
+        driver.findElement(By.cssSelector("[href*='car']"));
+        //start -> ^
+        driver.findElement(By.cssSelector("[href^='/let']"));
+        //end on -> $
+        driver.findElement(By.cssSelector("[href$='work']"));
     }
 
     @AfterMethod
