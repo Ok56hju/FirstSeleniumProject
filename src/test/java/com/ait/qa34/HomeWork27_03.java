@@ -47,7 +47,19 @@ public class HomeWork27_03 {
         driver.findElement(By.cssSelector("[type='text/javascript']"));
 
     }
-
+    @Test
+    public void findElementByXpath(){
+        driver.findElement(By.xpath("//*[@id='dialog-notifications-success']"));
+        driver.findElement(By.xpath("//*[@class='bar-notification']"));
+        driver.findElement(By.xpath("//*[contains(@title,'Error')]"));
+        driver.findElement(By.xpath("//*[contains(@title,'Close')]"));
+        driver.findElement(By.xpath("//*[contains(@class,'bar')]"));
+        driver.findElement(By.xpath("//*[@class='page-body']"));
+        driver.findElement(By.xpath("//*[contains(@class,'grid')]"));
+        driver.findElement(By.xpath("//*[contains(@class,'my-account')]"));
+        driver.findElement(By.xpath("//*[@class='ui-autocomplete ui-front ui-menu ui-widget ui-widget-content ui-corner-all']"));
+        driver.findElement(By.xpath("//*[contains(@type,'text/javascript')]"));
+    }
 
     @AfterMethod
     public void tearDown(){
